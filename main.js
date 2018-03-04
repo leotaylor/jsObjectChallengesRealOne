@@ -76,3 +76,28 @@ champs("Germany");
 champs("Italy");
 champs("England");
 champs("Portugal");
+
+// -------Challenge 3 ---------
+var test1 = {a: 5, b:2, operator: "add"};
+var test2 = {a: 5, b:2, operator: "subtract"}; 
+var test3 = {a: 5, b:2, operator: "multiply"}; 
+var test4 = {a: 5, b:2, operator: "divide"};
+
+function math (elementary){
+    var result = 0;
+    if(elementary.operator === "add")
+        result = (elementary.a + elementary.b);
+    if(elementary.operator === "subtract")
+        result = (elementary.a - elementary.b);
+    if(elementary.operator === "multiply")
+        result = (elementary.a * elementary.b);
+    if(elementary.operator === "divide")
+        result = (elementary.a / elementary.b);
+var algebraDiv = document.getElementById("algebra");
+var printMath = "<h1> For " + elementary.operator + ", The answer is: " + result + "!</h1>";
+algebraDiv.innerHTML += printMath;
+}
+math(test1);
+math(test2);
+math(test3);
+math(test4);
